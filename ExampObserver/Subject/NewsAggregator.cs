@@ -18,19 +18,31 @@ namespace ExampObserver.Subject
             _random = new Random();
         }
 
+        public void NewNewsAvailable()
+        {
+            NotifyObserver();
+        }
+
         public void NotifyObserver()
         {
-            throw new NotImplementedException();
+            string twit = GetTwitterNews();
+            string coupon = GetLentaCoupons();
+            string msg = GetInstaMesg();
+
+            foreach (var observer in _observers)
+            {
+                observer.Update(twit, coupon, msg);
+            }
         }
 
         public void RegisterObserver(IObserver observer)
         {
-            throw new NotImplementedException();
+            _observers.Add(observer);
         }
 
         public void RemoveObserver(IObserver observer)
         {
-            throw new NotImplementedException();
+            _observers.Remove(observer);
         }
 
         public string GetTwitterNews()

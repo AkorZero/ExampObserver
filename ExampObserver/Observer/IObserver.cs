@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExampObserver.Observer
 {
-    internal interface IObserver
+    public interface IObserver
     {
+        void Update(string twitter, string lenta, string insta);
+        void Display();
     }
 }
