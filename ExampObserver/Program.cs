@@ -19,6 +19,11 @@ internal class Program
 
         newsAggregator.NewNewsAvailable();
 
+        newsAggregator.RemoveObserver(instagramWidget);
+        Console.WriteLine();
+
+        newsAggregator.NewNewsAvailable();
+
         Console.WriteLine();
         Console.ReadLine();
 
