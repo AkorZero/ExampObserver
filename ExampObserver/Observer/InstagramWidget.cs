@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExampObserver.Observer
 {
-    internal class InstagramWidget
+    internal class InstagramWidget : IObserver
     {
         string _message;
         public void Display()
