@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace ExampObserver.Observer
 {
-    internal class InstaWidget
+    internal class InstagramWidget
     {
-        string _photo;
+        string _message;
         public void Display()
         {
-            Console.WriteLine($"Insta: {_photo}");
+            Console.WriteLine($"Insta: {_message}");
         }
 
         public void Update(string twitter, string lenta, string insta)
         {
-            _photo = insta;
+            _message = insta;
             Display();
         }
     }
